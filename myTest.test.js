@@ -53,7 +53,7 @@ const testPage = async (page, timestamps) => {
         remainder -= remainder;
     }
     // Log all extracted timestamps
-    console.log('Extracted Timestamps:', timestamps);
+    // console.log('Extracted Timestamps:', timestamps);
 };
 
 // write a test
@@ -76,7 +76,7 @@ test('testName', async ({ page }) => {
 
     // always rounds up
     var pages = Math.ceil(num_articles / count);
-    console.log(`num_articles: ${num_articles}, count: ${count}, pages: ${pages}`);
+    //console.log(`num_articles: ${num_articles}, count: ${count}, pages: ${pages}`);
 
     while (pages > 0) {
         // test page
@@ -88,6 +88,9 @@ test('testName', async ({ page }) => {
         }
         pages -= 1;
     }
+
+    // print array
+    console.log('Extracted Timestamps:', timestamps);
 
     // Check if dates are sorted
     const sorted = areDatesSorted(timestamps);
